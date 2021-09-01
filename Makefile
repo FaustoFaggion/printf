@@ -4,19 +4,15 @@ CC			:= clang
 
 CFLAGS		:= -Wall -Werror -Wextra
 
-SRC			:= 	ft_itoa.c/
-				ft_printf_writes.c/
-				ft_printf.c/
-				ft_putnbr_base.c/
-				ft_strdup.c/
-				ft_strlen.c/
-				ft_unsigned_itoa.c/
-
-SRC_BONUS	:=
+SRC			:=	ft_itoa.c\
+                ft_printf_writes.c\
+                ft_printf.c\
+                ft_putnbr_base.c\
+                ft_strdup.c\
+                ft_strlen.c\
+                ft_unsigned_itoa.c
 
 OBJ			:= $(SRC:.c=.o)
-
-OBJ_BONUS	:= $(SRC_BONUS:.c=.o)
 
 all:	$(NAME)
 

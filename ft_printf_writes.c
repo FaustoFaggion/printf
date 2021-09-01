@@ -55,6 +55,7 @@ int	wr_hex(va_list ptr, char c)
 	unsigned long int	p;
 	int					len;
 
+	len = 0;
 	p = va_arg(ptr, unsigned long int);
 	if (c == 'p')
 	{

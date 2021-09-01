@@ -5,6 +5,7 @@ static int	type(const char *c, va_list ptr)
 {
 	int	len;
 
+	len = 0;
 	if (*c == 'c')
 		len = wr_char(ptr);
 	else if (*c == 's')
