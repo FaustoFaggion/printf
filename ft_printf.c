@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "libftprintf.h"
+#include "ft_printf.h"
 
 static int	type(const char *c, va_list ptr)
 {
@@ -53,7 +53,7 @@ int	ft_printf(const char *str, ...)
 	return (len);
 }
 
-
+/*
 int	main(void)
 {
 	int		str1 = 11;
@@ -66,4 +66,4 @@ int	main(void)
 	printf("%d\n", ft_printf("%x %s", str1, str2));
 	return (0);
 }
-
+*/

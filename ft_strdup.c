@@ -6,11 +6,11 @@
 /*   By: fagiusep <fagiusep@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/13 15:17:31 by fagiusep          #+#    #+#             */
-/*   Updated: 2021/08/30 15:23:37 by fagiusep         ###   ########.fr       */
+/*   Updated: 2021/09/01 18:28:20 by fagiusep         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 
 char	*ft_strdup(const char *s)
 {

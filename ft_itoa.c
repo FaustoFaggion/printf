@@ -6,11 +6,11 @@
 /*   By: fagiusep <fagiusep@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/13 15:13:12 by fagiusep          #+#    #+#             */
-/*   Updated: 2021/09/01 17:26:19 by fagiusep         ###   ########.fr       */
+/*   Updated: 2021/09/01 18:28:20 by fagiusep         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 
 static size_t	ft_numlen(int num);
 static char		*main_itoa(char *str, size_t n_digits, int n);
