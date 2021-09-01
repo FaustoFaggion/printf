@@ -56,14 +56,12 @@ int	ft_printf(const char *str, ...)
 /*
 int	main(void)
 {
-	int		str1 = 11;
-	char	str2[] = "42";
 
-	ft_printf("%x %s", str1, str2);
+	ft_printf("%c %c %c", ' ', ' ', ' ');
 
-	//printf("%x %s\n", str1, str2);
+	ft_printf("%c %c %c", ' ', ' ', ' ');
 
-	printf("%d\n", ft_printf("%x %s", str1, str2));
 	return (0);
 }
+
 */
