@@ -30,9 +30,6 @@ int	ft_def_base(char *base)
 
 int	ft_verify_base(int def_base)
 {
-	int	index;
-
-	index = 0;
 	if (def_base == 1 || def_base == '\0')
 	{
 		write (1, "Favor colocar uma base maior ou igual a 2.", 41);
@@ -84,8 +81,6 @@ int	ft_chage_base(int def_base, int nbr, char *base)
 int	ft_putnbr_base(unsigned long nbr, char *base)
 {
 	unsigned long	def_base;
-	unsigned long	nbr_nbr;
-	unsigned long	index;
 
 	def_base = ft_def_base(base);
 	ft_verify_base(def_base);

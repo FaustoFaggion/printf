@@ -4,7 +4,13 @@ CC			:= clang
 
 CFLAGS		:= -Wall -Werror -Wextra
 
-SRC			:= 	ft_printf.c/
+SRC			:= 	ft_itoa.c/
+				ft_printf_writes.c/
+				ft_printf.c/
+				ft_putnbr_base.c/
+				ft_strdup.c/
+				ft_strlen.c/
+				ft_unsigned_itoa.c/
 
 SRC_BONUS	:=
 
@@ -31,3 +37,10 @@ fclean: clean
 	rm -rf $(NAME)
 
 re: fclean all
+
+run:
+	gcc -Wall -Wextra -Werror -fsanitize=address -g3 get_next_line.c get_next_line_utils.c main.c && ./a.out
+
+valgrind:
+	gcc get_next_line.c get_next_line_utils.c main.c
+	valgrind ./a.out

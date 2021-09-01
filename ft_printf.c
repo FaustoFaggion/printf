@@ -52,17 +52,17 @@ int	ft_printf(const char *str, ...)
 	return (len);
 }
 
-/*
+
 int	main(void)
 {
 	int		str1 = 11;
 	char	str2[] = "42";
-	int		i;
 
-	ft_printf("%x\n", str1);
+	ft_printf("%x %s", str1, str2);
 
-	printf("%x\n", str1);
+	//printf("%x %s\n", str1, str2);
 
+	printf("%d\n", ft_printf("%x %s", str1, str2));
 	return (0);
 }
-*/
+
