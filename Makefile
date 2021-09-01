@@ -35,8 +35,8 @@ fclean: clean
 re: fclean all
 
 run:
-	gcc -Wall -Wextra -Werror -fsanitize=address -g3 get_next_line.c get_next_line_utils.c main.c && ./a.out
+	gcc -Wall -Wextra -Werror -fsanitize=address -g3 *.c && ./a.out
 
 valgrind:
-	gcc get_next_line.c get_next_line_utils.c main.c
+	gcc *.c
 	valgrind ./a.out

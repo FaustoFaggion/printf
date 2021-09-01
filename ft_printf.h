@@ -1,5 +1,5 @@
-#ifndef LIBFTPRINTF_H
-# define LIBFTPRINTF_H
+#ifndef FT_PRINTF_H
+# define FT_PRINTF_H
 
 # include <stdlib.h>
 # include <stddef.h>
@@ -14,7 +14,7 @@ char	*ft_itoa(int n);
 
 char	*ft_unsigned_itoa(int n);
 
-int	ft_printf(const char *str, ...);
+int		ft_printf(const char *str, ...);
 
 int		ft_putnbr_base(unsigned long nbr, char *base);
 
