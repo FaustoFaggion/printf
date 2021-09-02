@@ -7,7 +7,7 @@ static int	type(const char *c, va_list ptr)
 
 	len = 0;
 	if (*c == 'c')
-		len = wr_char(ptr);
+		len = wr_char(ptr, *c);
 	else if (*c == 's')
 		len = wr_str(ptr);
 	else if (*c == 'p')
@@ -22,6 +22,8 @@ static int	type(const char *c, va_list ptr)
 		len = wr_hex(ptr, *c);
 	else if (*c == 'X')
 		len = wr_hex(ptr, *c);
+	else if (*c == '%')
+		len = wr_char(ptr, *c);
 	return (len);
 }
 
@@ -36,7 +38,7 @@ int	ft_printf(const char *str, ...)
 	len = 0;
 	while (str[i] != '\0')
 	{
-		if (str[i] == '%' && str[i + 1] != '%')
+		if (str[i] == '%')
 		{
 			i++;
 			len += type(&str[i], ptr);
@@ -53,15 +55,14 @@ int	ft_printf(const char *str, ...)
 	return (len);
 }
 
-/*
 int	main(void)
 {
 
-	ft_printf("%c %c %c", ' ', ' ', ' ');
+	printf("%p", -1);
 
-	ft_printf("%c %c %c", ' ', ' ', ' ');
+	//ft_printf("%p", -1);
 
 	return (0);
 }
 
-*/
+

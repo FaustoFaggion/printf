@@ -1,12 +1,20 @@
 #include "ft_printf.h"
 
-int	wr_char(va_list ptr)
+int	wr_char(va_list ptr, char c)
 {
 	char	s;
 	int		len;
 
-	s = va_arg(ptr, int);
-	write(1, &s, 1);
+	if (c == 'c')
+	{
+		s = va_arg(ptr, int);
+		write(1, &s, 1);
+	}
+	else if (c == '%')
+	{
+		s = '%';
+		write(1, &s, 1);
+	}
 	len = 1;
 	return (len);
 }
@@ -17,8 +25,10 @@ int	wr_str(va_list ptr)
 	int		len;
 
 	s = va_arg(ptr, char *);
-	write(1, s, ft_strlen(s));
+	if (s == NULL)
+		return (-1);
 	len = ft_strlen(s);
+	write(1, s, len);
 	return (len);
 }
 
@@ -31,7 +41,7 @@ int	wr_int(va_list ptr)
 	nb = va_arg(ptr, int);
 	s = ft_itoa(nb);
 	len = ft_strlen(s);
-	write(1, s, len);
+	write(1, &s, len);
 	free(s);
 	return (len);
 }
@@ -57,6 +67,8 @@ int	wr_hex(va_list ptr, char c)
 
 	len = 0;
 	p = va_arg(ptr, unsigned long int);
+	if (p <= 0)
+		return (-1);
 	if (c == 'p')
 	{
 		write(1, "0x", 2);

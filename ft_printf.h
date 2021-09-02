@@ -18,7 +18,7 @@ int		ft_printf(const char *str, ...);
 
 int		ft_putnbr_base(unsigned long nbr, char *base);
 
-int		wr_char(va_list ptr);
+int		wr_char(va_list ptr, char c);
 
 int		wr_str(va_list ptr);
 
