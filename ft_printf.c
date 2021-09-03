@@ -11,7 +11,7 @@ static int	type(const char *c, va_list ptr)
 	else if (*c == 's')
 		len = wr_str(ptr);
 	else if (*c == 'p')
-		len = wr_p_hex(ptr, *c);
+		len = wr_p_hex(ptr);
 	else if (*c == 'd')
 		len = wr_int(ptr);
 	else if (*c == 'i')

@@ -6,13 +6,13 @@
 /*   By: fagiusep <fagiusep@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/03 15:46:16 by fagiusep          #+#    #+#             */
-/*   Updated: 2021/09/03 15:49:48 by fagiusep         ###   ########.fr       */
+/*   Updated: 2021/09/03 15:54:55 by fagiusep         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	wr_p_hex(va_list ptr, char c)
+int	wr_p_hex(va_list ptr)
 {
 	unsigned long int	p;
 	int					len;
