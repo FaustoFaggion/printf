@@ -63,27 +63,3 @@ int	wr_unsigned(va_list ptr)
 	free(s);
 	return (len);
 }
-
-int	wr_hex(va_list ptr, char c)
-{
-	unsigned long int	p;
-	int					len;
-
-	len = 0;
-
-	if (c == 'p')
-	{
-		p = va_arg(ptr, unsigned long int);
-		write(1, "0x", 2);
-		len = ft_printf_base(p, "0123456789abcdef");
-		len += 2;
-	}
-	else if (c == 'x')
-	{
-		p = va_arg(ptr, unsigned int);
-		len = ft_printf_base(p, "0123456789abcdef");
-	}
-	else if (c == 'X')
-		len = ft_printf_base(p, "0123456789ABCDEF");
-	return (len);
-}
