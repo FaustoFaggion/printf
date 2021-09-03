@@ -53,16 +53,14 @@ int	ft_printf(const char *str, ...)
 	va_end(ptr);
 	return (len);
 }
-/*
+
 int	main(void)
 {
 	int	s = 255;
 
-	//printf("%p", &s);
 
-	ft_printf("%d", s);
+	ft_printf(" NULL %s NULL ", NULL);
 
 	return (0);
 }
-*/
 

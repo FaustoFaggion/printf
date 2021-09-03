@@ -26,7 +26,10 @@ int	wr_str(va_list ptr)
 
 	s = va_arg(ptr, char *);
 	if (s == NULL)
-		return (-1);
+	{
+		write(1, "(null)", 6);
+		return (6);
+	}
 	len = ft_strlen(s);
 	write(1, s, len);
 	return (len);
