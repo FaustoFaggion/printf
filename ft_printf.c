@@ -56,10 +56,10 @@ int	ft_printf(const char *str, ...)
 
 int	main(void)
 {
-	int	s = 255;
+	//int	s = 255;
 
 
-	ft_printf(" NULL %s NULL ", NULL);
+	ft_printf(" %p %p ", 0, 0);
 
 	return (0);
 }
