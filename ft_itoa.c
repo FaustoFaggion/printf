@@ -6,7 +6,7 @@
 /*   By: fagiusep <fagiusep@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/13 15:13:12 by fagiusep          #+#    #+#             */
-/*   Updated: 2021/09/02 21:13:03 by fagiusep         ###   ########.fr       */
+/*   Updated: 2021/09/03 15:20:54 by fagiusep         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,14 +32,16 @@ char	*ft_itoa(int n)
 	return (str);
 }
 
-static size_t	ft_numlen(int num)
+static size_t	ft_numlen(int n)
 {
 	size_t	len;
 
 	len = 0;
-	while (num)
+	if (n < 0)
+		len++;
+	while (n)
 	{
-		num = num / 10;
+		n = n / 10;
 		len++;
 	}
 	return (len);
