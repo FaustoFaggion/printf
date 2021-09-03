@@ -63,7 +63,7 @@ int	wr_unsigned(va_list ptr)
 	free(s);
 	return (len);
 }
-
+/*
 int	wr_hex(va_list ptr, char c)
 {
 	unsigned long int	p;
@@ -83,3 +83,4 @@ int	wr_hex(va_list ptr, char c)
 		len = ft_printf_base(p, "0123456789ABCDEF");
 	return (len);
 }
+*/

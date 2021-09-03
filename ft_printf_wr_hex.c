@@ -6,12 +6,12 @@
 /*   By: fagiusep <fagiusep@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/03 15:46:16 by fagiusep          #+#    #+#             */
-/*   Updated: 2021/09/03 16:09:54 by fagiusep         ###   ########.fr       */
+/*   Updated: 2021/09/03 16:16:52 by fagiusep         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-/*
+
 int	wr_p_hex(va_list ptr)
 {
 	unsigned long int	p;
@@ -20,11 +20,11 @@ int	wr_p_hex(va_list ptr)
 	len = 0;
 	p = va_arg(ptr, unsigned long int);
 	write(1, "0x", 2);
-	len += 2;
 	len = ft_printf_base(p, "0123456789abcdef");
+	len += 2;
 	return (len);
 }
-*/
+
 int wr_x_hex(va_list ptr, char c)
 {
 	unsigned int	p;

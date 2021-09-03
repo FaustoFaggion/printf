@@ -26,9 +26,9 @@ int		wr_int(va_list ptr);
 
 int		wr_unsigned(va_list ptr);
 
-int		wr_hex(va_list ptr, char c);
+//int		wr_hex(va_list ptr, char c);
 
-//int		wr_p_hex(va_list ptr);
+int		wr_p_hex(va_list ptr);
 
 int		wr_x_hex(va_list ptr, char c);
 #endif
