@@ -7,7 +7,7 @@ CFLAGS		:= -Wall -Werror -Wextra
 SRC			:=	ft_itoa.c\
                 ft_printf_writes.c\
                 ft_printf.c\
-                ft_putnbr_base.c\
+                ft_printf_base.c\
                 ft_strdup.c\
                 ft_strlen.c\
                 ft_unsigned_itoa.c

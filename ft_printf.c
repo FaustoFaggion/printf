@@ -42,14 +42,13 @@ int	ft_printf(const char *str, ...)
 		{
 			i++;
 			len += type(&str[i], ptr);
-			i++;
 		}
 		else
 		{
 			write(1, &str[i], 1);
-			i++;
 			len++;
 		}
+		i++;
 	}
 	va_end(ptr);
 	return (len);
@@ -57,10 +56,11 @@ int	ft_printf(const char *str, ...)
 
 int	main(void)
 {
+	int	s = 255;
 
-	printf("%p", -1);
+	//printf("%p", &s);
 
-	//ft_printf("%p", -1);
+	ft_printf("%d", s);
 
 	return (0);
 }

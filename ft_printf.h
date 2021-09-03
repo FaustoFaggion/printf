@@ -16,7 +16,7 @@ char	*ft_unsigned_itoa(int n);
 
 int		ft_printf(const char *str, ...);
 
-int		ft_putnbr_base(unsigned long nbr, char *base);
+int		ft_printf_base(unsigned long p, char *base);
 
 int		wr_char(va_list ptr, char c);
 

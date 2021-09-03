@@ -41,7 +41,7 @@ int	wr_int(va_list ptr)
 	nb = va_arg(ptr, int);
 	s = ft_itoa(nb);
 	len = ft_strlen(s);
-	write(1, &s, len);
+	write(1, s, len);
 	free(s);
 	return (len);
 }
@@ -67,17 +67,17 @@ int	wr_hex(va_list ptr, char c)
 
 	len = 0;
 	p = va_arg(ptr, unsigned long int);
-	if (p <= 0)
+	if (!p)
 		return (-1);
 	if (c == 'p')
 	{
 		write(1, "0x", 2);
-		len = ft_putnbr_base(p, "0123456789abcdef");
+		len = ft_printf_base(p, "0123456789abcdef");
 		len += 2;
 	}
 	else if (c == 'x')
-		len = ft_putnbr_base(p, "0123456789abcdef");
+		len = ft_printf_base(p, "0123456789abcdef");
 	else if (c == 'X')
-		len = ft_putnbr_base(p, "0123456789ABCDEF");
+		len = ft_printf_base(p, "0123456789ABCDEF");
 	return (len);
 }
