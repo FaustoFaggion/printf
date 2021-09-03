@@ -73,11 +73,6 @@ int	wr_hex(va_list ptr, char c)
 	p = va_arg(ptr, unsigned long int);
 	if (c == 'p')
 	{
-		if (!p)
-		{
-			write(1, "(null)", 6);
-			return (6);
-		}
 		write(1, "0x", 2);
 		len = ft_printf_base(p, "0123456789abcdef");
 		len += 2;
