@@ -53,7 +53,7 @@ int	ft_printf(const char *str, ...)
 	va_end(ptr);
 	return (len);
 }
-
+/*
 int	main(void)
 {
 	//int	s = 255;
@@ -63,3 +63,4 @@ int	main(void)
 
 	return (0);
 }
+*/
