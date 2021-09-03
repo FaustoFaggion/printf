@@ -6,7 +6,7 @@
 /*   By: fagiusep <fagiusep@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/03 15:46:16 by fagiusep          #+#    #+#             */
-/*   Updated: 2021/09/03 15:54:55 by fagiusep         ###   ########.fr       */
+/*   Updated: 2021/09/03 15:59:21 by fagiusep         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ int wr_x_hex(va_list ptr, char c)
 	int				len;
 
 	len = 0;
-	p = va_arg(ptr, unsigned long int);
+	p = va_arg(ptr, unsigned int);
 	if (c == 'x')
 		len = ft_printf_base(p, "0123456789abcdef");
 	else if (c == 'X')

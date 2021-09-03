@@ -53,14 +53,14 @@ int	ft_printf(const char *str, ...)
 	va_end(ptr);
 	return (len);
 }
-/*
+
 int	main(void)
 {
 	//int	s = 255;
 
 
-	printf(" %x ", +9223372036854775807);
-
+	ft_printf(" %p ", -1);
+	printf(" %p ", -1);
 	return (0);
 }
-*/
+
