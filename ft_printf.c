@@ -11,10 +11,7 @@ static int	type(const char *c, va_list ptr)
 	else if (*c == 's')
 		len = wr_str(ptr);
 	else if (*c == 'p')
-	{
-		//len = wr_hex(ptr, *c);
-		len = wr_p_hex(ptr);
-	}
+		len = wr_hex(ptr, *c);
 	else if (*c == 'd')
 		len = wr_int(ptr);
 	else if (*c == 'i')
@@ -22,9 +19,9 @@ static int	type(const char *c, va_list ptr)
 	else if (*c == 'u')
 		len = wr_unsigned(ptr);
 	else if (*c == 'x')
-		len = wr_x_hex(ptr, *c);
+		len = wr_hex(ptr, *c);
 	else if (*c == 'X')
-		len = wr_x_hex(ptr, *c);
+		len = wr_hex(ptr, *c);
 	else if (*c == '%')
 		len = wr_char(ptr, *c);
 	return (len);
@@ -56,14 +53,14 @@ int	ft_printf(const char *str, ...)
 	va_end(ptr);
 	return (len);
 }
-/*
+
 int	main(void)
 {
-	//int	s = 255;
+	int	s = 255;
 
 
-	ft_printf(" %p ", -1);
-	printf(" %p ", -1);
+	ft_printf(" %x ", s);
+	printf(" %x ", s);
 	return (0);
 }
-*/
+

@@ -1,6 +1,24 @@
 #ifndef FT_PRINTF_H
 # define FT_PRINTF_H
 
+typedef struct s_print
+{
+	char				c;
+	char				*s;
+	unsigned long int	p;
+	int					d;
+	int					i;
+	unsigned int		u;
+	unsigned int		x;
+	unsigned int		X;
+	char				flag_hash;
+	char				flag_;
+	char				flag_plus;
+	char				flag_minus;
+	char				flag_width;
+}				t_print;
+
+
 # include <stdlib.h>
 # include <stddef.h>
 # include <stdarg.h>
@@ -26,9 +44,6 @@ int		wr_int(va_list ptr);
 
 int		wr_unsigned(va_list ptr);
 
-//int		wr_hex(va_list ptr, char c);
+int		wr_hex(va_list ptr, char c);
 
-int		wr_p_hex(va_list ptr);
-
-int		wr_x_hex(va_list ptr, char c);
 #endif
