@@ -3,11 +3,12 @@
 
 typedef struct s_print
 {
+	int					i;
+	int					len;
 	char				c;
 	char				*s;
 	unsigned long int	p;
 	int					d;
-	int					i;
 	unsigned int		u;
 	unsigned int		x;
 	unsigned int		X;
@@ -45,5 +46,9 @@ int		wr_int(va_list ptr);
 int		wr_unsigned(va_list ptr);
 
 int		wr_hex(va_list ptr, char c);
+
+//bonus
+
+char	*ft_strchr(const char *s, int c);
 
 #endif
