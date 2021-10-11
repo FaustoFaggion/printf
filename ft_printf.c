@@ -59,8 +59,8 @@ int	main(void)
 	int	s = 255;
 
 
-	ft_printf(" %x ", s);
-	printf(" %x ", s);
+	ft_printf(" %p ", &s);
+	printf(" %p ", &s);
 	return (0);
 }
 */
