@@ -24,12 +24,13 @@ typedef struct s_print
 # include <stddef.h>
 # include <stdarg.h>
 # include <unistd.h>
+# include "libft.h"
 
-char	*ft_strdup(const char *s);
+//char	*ft_strdup(const char *s);
 
-size_t	ft_strlen(const char *s);
+//size_t	ft_strlen(const char *s);
 
-char	*ft_itoa(int n);
+//char	*ft_itoa(int n);
 
 char	*ft_unsigned_itoa(int n);
 

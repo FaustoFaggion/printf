@@ -23,14 +23,13 @@ $(NAME):	$(LIBFT) $(OBJ)
 	ar rcs $(NAME) $(OBJ)
 
 %.o:	%.c
-	$(CC) $(CFLAGS) $(CPPFLAGS) -c $< -o $@
+	$(CC) $(CFLAGS) $(CPPFLAGS) -c $< -I $(PATH_LIBFT) -o $@
 
 $(LIBFT):
 	make -C $(PATH_LIBFT)
 
 clean:
 	rm -rf $(OBJ)
-	rm -rf $(OBJ_BONUS)
 	make -C $(PATH_LIBFT) clean
 
 fclean: clean
@@ -40,7 +39,7 @@ fclean: clean
 re: fclean all
 
 run:
-	$(CC) $(FLAGS) ft_printf.c $(NAME) && ./a.out
+	$(CC) $(FLAGS) ft_printf.c $(NAME) -I $(PATH_LIBFT) && ./a.out
 
 sanitize:
 	$(CC) $(CFLAGS) -fsanitize=address -g3 *.c $(NAME) && ./a.out

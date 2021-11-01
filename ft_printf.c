@@ -56,9 +56,10 @@ int	ft_printf(const char *str, ...)
 /*
 int	main(void)
 {
-	int	s = 255;
+	int	*s;
+	int	i = 255;
 
-
+	s = &i;
 	ft_printf(" %p ", &s);
 	printf(" %p ", &s);
 	return (0);
