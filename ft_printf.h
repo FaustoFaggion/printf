@@ -1,36 +1,23 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: fausto <fausto@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/11/02 10:53:26 by fausto            #+#    #+#             */
+/*   Updated: 2021/11/02 10:59:40 by fausto           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef FT_PRINTF_H
 # define FT_PRINTF_H
-
-typedef struct s_print
-{
-	int					i;
-	int					len;
-	char				c;
-	char				*s;
-	unsigned long int	p;
-	int					d;
-	unsigned int		u;
-	unsigned int		x;
-	unsigned int		X;
-	char				flag_hash;
-	char				flag_;
-	char				flag_plus;
-	char				flag_minus;
-	char				flag_width;
-}				t_print;
-
 
 # include <stdlib.h>
 # include <stddef.h>
 # include <stdarg.h>
 # include <unistd.h>
 # include "libft.h"
-
-//char	*ft_strdup(const char *s);
-
-//size_t	ft_strlen(const char *s);
-
-//char	*ft_itoa(int n);
 
 char	*ft_unsigned_itoa(int n);
 
@@ -47,9 +34,5 @@ int		wr_int(va_list ptr);
 int		wr_unsigned(va_list ptr);
 
 int		wr_hex(va_list ptr, char c);
-
-//bonus
-
-char	*ft_strchr(const char *s, int c);
 
 #endif

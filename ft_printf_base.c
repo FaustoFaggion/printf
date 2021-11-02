@@ -1,5 +1,17 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_printf_base.c                                   :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: fausto <fausto@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/11/02 10:48:57 by fausto            #+#    #+#             */
+/*   Updated: 2021/11/02 11:00:59 by fausto           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "ft_printf.h"
-#include <stdio.h>
+
 static int	ft_size(unsigned long int p, int base_size)
 {
 	int	i;
@@ -27,7 +39,7 @@ int	ft_printf_base(unsigned long int p, char *base)
 	size_num = ft_size(p, base_size);
 	num = (char *)malloc((size_num + 1) * sizeof(char));
 	i = size_num;
-	while(i > 0)
+	while (i > 0)
 	{
 		num[i - 1] = base[p % 16];
 		p = p / 16;

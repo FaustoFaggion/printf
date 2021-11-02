@@ -1,4 +1,15 @@
-#include <stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: fausto <fausto@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/11/02 10:52:13 by fausto            #+#    #+#             */
+/*   Updated: 2021/11/02 11:27:55 by fausto           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "ft_printf.h"
 
 static int	type(const char *c, va_list ptr)
@@ -53,15 +64,3 @@ int	ft_printf(const char *str, ...)
 	va_end(ptr);
 	return (len);
 }
-/*
-int	main(void)
-{
-	int	*s;
-	int	i = 255;
-
-	s = &i;
-	ft_printf(" %p ", &s);
-	printf(" %p ", &s);
-	return (0);
-}
-*/

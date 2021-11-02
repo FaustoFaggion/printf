@@ -9,7 +9,6 @@ CC			= clang
 CFLAGS		= -Wall -Werror -Wextra
 
 SRC			=	ft_printf_wr.c\
-				ft_printf_wr_hex.c\
 				ft_printf.c\
 				ft_printf_base.c\
 				ft_uitoa.c\
